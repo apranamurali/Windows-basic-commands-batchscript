@@ -1,11 +1,9 @@
-# Windows-basic-commands-batchscript
-Ex08-Windows-basic-commands-batchscript
+# EX 08: Windows-basic-commands-batchscript
 
-
-# AIM:
+## AIM:
 To execute Windows basic commands and batch scripting
 
-# DESIGN STEPS:
+## DESIGN STEPS:
 
 ### Step 1:
 
@@ -21,81 +19,90 @@ Adapt paths as needed based on your system configuration.
 
 Execute the necessary commands/batch file for the desired output. 
 
+## WINDOWS COMMANDS:
 
-
-
-# WINDOWS COMMANDS:
 ## Exercise 1: Basic Directory and File Operations
+
 Create a directory named "MyLab" on the desktop.
 
-
 ## COMMAND AND OUTPUT
-mkdir %userprofile%\Desktop\MyLab
-![image](https://github.com/Aaron-0111/Windows-basic-commands-batchscript/assets/149347631/e95d419b-e1e0-46e4-b15a-526b5e311bd7)
 
 Change to the "MyLab" directory and create an empty text file named "MyFile.txt" inside it.
 
+```
+mkdir %userprofile%\Desktop\MyLab
+
+```
+
+![mkdir](https://github.com/Aakashraj04/Windows-basic-commands-batchscript/assets/121117266/9fd1bc4e-1eae-40f4-90cd-b3e375ccd68b)
+
+
+```
+cd %userprofile%\Desktop\MyLab
+```
+
+![cd](https://github.com/Aakashraj04/Windows-basic-commands-batchscript/assets/121117266/46461fa3-7da7-4805-84d8-5ff73bfac3a9)
+
+
+```
+type nul > MyFile.txt
+
+```
+![myfile_txt](https://github.com/Aakashraj04/Windows-basic-commands-batchscript/assets/121117266/9f8c69cf-5762-47cc-b442-da02ccbb0a44)
 
 ## COMMAND AND OUTPUT
-cd %userprofile%\Desktop\MyLab
-
-![image](https://github.com/Aaron-0111/Windows-basic-commands-batchscript/assets/149347631/696b13b0-15a4-4eee-b1a9-42f7d7f0178c)
-![image](https://github.com/Aaron-0111/Windows-basic-commands-batchscript/assets/149347631/bfd7435b-0d86-405e-a12a-26f3db05c13c)
 
 List the contents of the "MyLab" directory.
+```
+dir %userprofile%\Desktop\MyLab
+```
 
+![userprofile](https://github.com/Aakashraj04/Windows-basic-commands-batchscript/assets/121117266/f8868342-11ec-40c7-a0af-c92f66e6804c)
 
 ## COMMAND AND OUTPUT
-dir %userprofile%\Desktop\MyLab
-
-![image](https://github.com/Aaron-0111/Windows-basic-commands-batchscript/assets/149347631/b4ac4df6-a5a8-4111-a724-d0790156e9f0)
 
 Copy "MyFile.txt" to a new folder named "Backup" on the desktop.
 
-## COMMAND AND OUTPUT
+```
 mkdir %userprofile%\Desktop\Backup
 
-copy MyFile.txt %userprofile%\Desktop\Backup
+```
+![backup](https://github.com/Aakashraj04/Windows-basic-commands-batchscript/assets/121117266/945f1493-8ee2-408d-aa59-138912464919)
 
-![image](https://github.com/Aaron-0111/Windows-basic-commands-batchscript/assets/149347631/2f32ee2c-a44a-4c2e-85c7-51782fec0ad8)
-![image](https://github.com/Aaron-0111/Windows-basic-commands-batchscript/assets/149347631/5e32ab54-ab74-4bc0-9368-c9c08a21d276)
+```
+copy MyFile.txt %userprofile%\Desktop\Backup
+```
+
+![Screenshot 2024-05-08 200923](https://github.com/Aakashraj04/Windows-basic-commands-batchscript/assets/121117266/15f53b1e-1cc4-47e6-9017-655b14c00e43)
+
+
+## COMMAND AND OUTPUT
 
 Move the "MyLab" directory to the "Documents" folder.
 
+```
+mkdir %userprofile%\Desktop\Documents
+```
 
-## COMMAND AND OUTPUT
-mv Myfile.txt %userprofile%\Documents
-![image](https://github.com/Aaron-0111/Windows-basic-commands-batchscript/assets/149347631/244dd6b7-8a61-4a1b-8a00-086fc2c61ee6)
-
+```
+move MyLab Documents
+```
+![move](https://github.com/Aakashraj04/Windows-basic-commands-batchscript/assets/121117266/bf3921e6-1988-42a4-b3cd-224afda8fe18)
 
 ## Exercise 2: Advanced Batch Scripting
 Create a batch script named "BackupScript.bat" that creates a backup of files with the ".docx" extension from the "Documents" folder to a new folder named "DocBackup" on the desktop.
+
 ```
 @echo off
 mkdir %userprofile%\Desktop\DocBackup
 copy %userprofile%\Documents\*.docx %userprofile%\Desktop\DocBackup
 echo Backup completed successfully!
+
 ```
-Modify the script to delete files with the ".docx" extension from the "Documents" folder after creating the backup.
-```
-@echo off
-mkdir %userprofile%\Desktop\DocBackup
-copy %userprofile%\Documents\*.docx %userprofile%\Desktop\DocBackup
-del %userprofile%\Documents\*.docx
-echo Backup and deletion completed successfully!
-```
-
-
-
-
-
-
 
 ## OUTPUT
 
-![image](https://github.com/Aaron-0111/Windows-basic-commands-batchscript/assets/149347631/2dc920d8-968a-4998-867d-501afcafc1b3)
-
-
+![Screenshot 2024-05-08 202436](https://github.com/Aakashraj04/Windows-basic-commands-batchscript/assets/121117266/c08073e2-a0bf-443f-b3c0-13b8a224e02c)
 
 
 # RESULT:
